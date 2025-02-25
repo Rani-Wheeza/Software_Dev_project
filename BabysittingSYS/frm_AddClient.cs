@@ -146,8 +146,9 @@ namespace BabysittingSYS
 
         private void bn_Back_Click(object sender, EventArgs e)
         {
-            this.Close();
             Parent.Visible = true;
+            this.Close();
+            
         }
 
         private void GB_AddClientDetails_Enter(object sender, EventArgs e)
@@ -160,7 +161,7 @@ namespace BabysittingSYS
             frm_MakeBooking frm_MakeBooking = new frm_MakeBooking();
 
             frm_MakeBooking.Show();
-            this.Close();
+            this.Hide();
         }
     }
 }
