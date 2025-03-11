@@ -116,6 +116,21 @@ namespace BabysittingSYS
                 return;
             }
 
+            if (cbo_YesNo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Yes or No must be selected", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cbo_YesNo.Focus();
+                return;
+            }
+
+            if (cbo_Experience.SelectedIndex == -1)
+            {
+                MessageBox.Show("Number must be selected", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cbo_Experience.Focus();
+                return;
+            }
+
+
 
 
             //display confirmation message
@@ -137,8 +152,8 @@ namespace BabysittingSYS
 
 
 
-
-            
+            cbo_Experience.SelectedIndex = -1;
+            cbo_YesNo.SelectedIndex = -1;
             txt_SitterID.Text = "10002";
             txt_FirstName.Focus();
             
@@ -152,6 +167,11 @@ namespace BabysittingSYS
         }
 
         private void GB_AddSitterDetails_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_Rates_Click(object sender, EventArgs e)
         {
 
         }

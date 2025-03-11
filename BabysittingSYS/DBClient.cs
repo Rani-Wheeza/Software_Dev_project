@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Client;
 
 namespace BabysittingSYS
 {
@@ -70,11 +70,26 @@ namespace BabysittingSYS
         public void setEmail(String Email) { this.Email = Email; }
         public void setNoOfChildren(String NoOfChildren) { this.NoOfChildren = NoOfChildren; }
 
-       /* public DataSet GetClient() 
+        public DataSet Client
         {
-        
-        }*/
+            get
+            {
+                DataSet ds = new DataSet();
+                //this opens a db connection
+                OracleConnection conn = new OracleConnection(DBConnect.oradb);
 
+                conn.Open();
+                //Define the SQL query to be executed
+                String strSQL = "SELECT * FROM Client ORDER BY SitterID";
 
+                //Execute the SQL query (OracleCommand)
+                OracleCommand cmd = new OracleCommand(strSQL, conn);
+                OracleDataAdapter da = new OracleDataAdapter(cmd);
+
+                da.Fill(ds, "Client");
+                conn.Close();
+                return ds;
+            }
+        }
     }
 }

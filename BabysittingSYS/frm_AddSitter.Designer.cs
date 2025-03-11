@@ -39,6 +39,11 @@
             this.txt_FirstName = new System.Windows.Forms.TextBox();
             this.lb_SitterID = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mnu_Home = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Bookings = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Services = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_Rates = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_AboutUs = new System.Windows.Forms.ToolStripMenuItem();
             this.lb_Bio = new System.Windows.Forms.Label();
             this.lb_Eircode = new System.Windows.Forms.Label();
             this.lb_Town = new System.Windows.Forms.Label();
@@ -48,6 +53,8 @@
             this.lb_FirstName = new System.Windows.Forms.Label();
             this.lb_Street = new System.Windows.Forms.Label();
             this.GB_AddSitterDetails = new System.Windows.Forms.GroupBox();
+            this.cbo_YesNo = new System.Windows.Forms.ComboBox();
+            this.lb_Certified = new System.Windows.Forms.Label();
             this.gb_BioDetails = new System.Windows.Forms.GroupBox();
             this.txt_Skills = new System.Windows.Forms.TextBox();
             this.txt_Bio = new System.Windows.Forms.TextBox();
@@ -57,11 +64,8 @@
             this.lbDOB = new System.Windows.Forms.Label();
             this.txt_DOB = new System.Windows.Forms.TextBox();
             this.bn_Back = new System.Windows.Forms.Button();
-            this.mnu_Home = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnu_Bookings = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnu_Services = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnu_Rates = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnu_AboutUs = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbo_Experience = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.GB_AddSitterDetails.SuspendLayout();
             this.gb_BioDetails.SuspendLayout();
@@ -69,10 +73,10 @@
             // 
             // bnEnterDetails
             // 
-            this.bnEnterDetails.Location = new System.Drawing.Point(324, 533);
-            this.bnEnterDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bnEnterDetails.Location = new System.Drawing.Point(260, 441);
+            this.bnEnterDetails.Margin = new System.Windows.Forms.Padding(2);
             this.bnEnterDetails.Name = "bnEnterDetails";
-            this.bnEnterDetails.Size = new System.Drawing.Size(192, 37);
+            this.bnEnterDetails.Size = new System.Drawing.Size(144, 30);
             this.bnEnterDetails.TabIndex = 18;
             this.bnEnterDetails.Text = "Enter Details";
             this.bnEnterDetails.UseVisualStyleBackColor = true;
@@ -80,75 +84,76 @@
             // 
             // txt_LastName
             // 
-            this.txt_LastName.Location = new System.Drawing.Point(149, 171);
-            this.txt_LastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_LastName.Location = new System.Drawing.Point(112, 139);
+            this.txt_LastName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_LastName.Name = "txt_LastName";
-            this.txt_LastName.Size = new System.Drawing.Size(192, 22);
+            this.txt_LastName.Size = new System.Drawing.Size(145, 20);
             this.txt_LastName.TabIndex = 17;
             // 
             // txt_Email
             // 
-            this.txt_Email.Location = new System.Drawing.Point(149, 263);
-            this.txt_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Email.Location = new System.Drawing.Point(112, 214);
+            this.txt_Email.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(192, 22);
+            this.txt_Email.Size = new System.Drawing.Size(145, 20);
             this.txt_Email.TabIndex = 16;
             // 
             // txt_SitterID
             // 
             this.txt_SitterID.Enabled = false;
-            this.txt_SitterID.Location = new System.Drawing.Point(149, 69);
-            this.txt_SitterID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_SitterID.Location = new System.Drawing.Point(112, 56);
+            this.txt_SitterID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SitterID.Name = "txt_SitterID";
-            this.txt_SitterID.Size = new System.Drawing.Size(79, 22);
+            this.txt_SitterID.Size = new System.Drawing.Size(60, 20);
             this.txt_SitterID.TabIndex = 15;
             // 
             // txt_Eircode
             // 
-            this.txt_Eircode.Location = new System.Drawing.Point(149, 402);
-            this.txt_Eircode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Eircode.Location = new System.Drawing.Point(112, 327);
+            this.txt_Eircode.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Eircode.Name = "txt_Eircode";
-            this.txt_Eircode.Size = new System.Drawing.Size(192, 22);
+            this.txt_Eircode.Size = new System.Drawing.Size(145, 20);
             this.txt_Eircode.TabIndex = 14;
             // 
             // txt_Town
             // 
-            this.txt_Town.Location = new System.Drawing.Point(149, 375);
-            this.txt_Town.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Town.Location = new System.Drawing.Point(112, 305);
+            this.txt_Town.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Town.Name = "txt_Town";
-            this.txt_Town.Size = new System.Drawing.Size(192, 22);
+            this.txt_Town.Size = new System.Drawing.Size(145, 20);
             this.txt_Town.TabIndex = 13;
             // 
             // txt_Street
             // 
-            this.txt_Street.Location = new System.Drawing.Point(149, 347);
-            this.txt_Street.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Street.Location = new System.Drawing.Point(112, 282);
+            this.txt_Street.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Street.Name = "txt_Street";
-            this.txt_Street.Size = new System.Drawing.Size(192, 22);
+            this.txt_Street.Size = new System.Drawing.Size(145, 20);
             this.txt_Street.TabIndex = 12;
             // 
             // txt_PhoneNo
             // 
-            this.txt_PhoneNo.Location = new System.Drawing.Point(149, 292);
-            this.txt_PhoneNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_PhoneNo.Location = new System.Drawing.Point(112, 237);
+            this.txt_PhoneNo.Margin = new System.Windows.Forms.Padding(2);
             this.txt_PhoneNo.Name = "txt_PhoneNo";
-            this.txt_PhoneNo.Size = new System.Drawing.Size(192, 22);
+            this.txt_PhoneNo.Size = new System.Drawing.Size(145, 20);
             this.txt_PhoneNo.TabIndex = 11;
             // 
             // txt_FirstName
             // 
-            this.txt_FirstName.Location = new System.Drawing.Point(149, 143);
-            this.txt_FirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_FirstName.Location = new System.Drawing.Point(112, 116);
+            this.txt_FirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_FirstName.Name = "txt_FirstName";
-            this.txt_FirstName.Size = new System.Drawing.Size(192, 22);
+            this.txt_FirstName.Size = new System.Drawing.Size(145, 20);
             this.txt_FirstName.TabIndex = 9;
             // 
             // lb_SitterID
             // 
             this.lb_SitterID.AutoSize = true;
-            this.lb_SitterID.Location = new System.Drawing.Point(52, 73);
+            this.lb_SitterID.Location = new System.Drawing.Point(39, 59);
+            this.lb_SitterID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_SitterID.Name = "lb_SitterID";
-            this.lb_SitterID.Size = new System.Drawing.Size(53, 16);
+            this.lb_SitterID.Size = new System.Drawing.Size(45, 13);
             this.lb_SitterID.TabIndex = 8;
             this.lb_SitterID.Text = "Sitter ID";
             // 
@@ -163,85 +168,127 @@
             this.mnu_AboutUs});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1181, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(886, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mnu_Home
+            // 
+            this.mnu_Home.Name = "mnu_Home";
+            this.mnu_Home.Size = new System.Drawing.Size(52, 20);
+            this.mnu_Home.Text = "Home";
+            // 
+            // mnu_Bookings
+            // 
+            this.mnu_Bookings.Name = "mnu_Bookings";
+            this.mnu_Bookings.Size = new System.Drawing.Size(68, 20);
+            this.mnu_Bookings.Text = "Bookings";
+            // 
+            // mnu_Services
+            // 
+            this.mnu_Services.Name = "mnu_Services";
+            this.mnu_Services.Size = new System.Drawing.Size(61, 20);
+            this.mnu_Services.Text = "Services";
+            // 
+            // mnu_Rates
+            // 
+            this.mnu_Rates.Name = "mnu_Rates";
+            this.mnu_Rates.Size = new System.Drawing.Size(47, 20);
+            this.mnu_Rates.Text = "Rates";
+            // 
+            // mnu_AboutUs
+            // 
+            this.mnu_AboutUs.Name = "mnu_AboutUs";
+            this.mnu_AboutUs.Size = new System.Drawing.Size(67, 20);
+            this.mnu_AboutUs.Text = "About us";
             // 
             // lb_Bio
             // 
             this.lb_Bio.AutoSize = true;
-            this.lb_Bio.Location = new System.Drawing.Point(40, 56);
+            this.lb_Bio.Location = new System.Drawing.Point(30, 46);
+            this.lb_Bio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Bio.Name = "lb_Bio";
-            this.lb_Bio.Size = new System.Drawing.Size(27, 16);
+            this.lb_Bio.Size = new System.Drawing.Size(22, 13);
             this.lb_Bio.TabIndex = 7;
             this.lb_Bio.Text = "Bio";
             // 
             // lb_Eircode
             // 
             this.lb_Eircode.AutoSize = true;
-            this.lb_Eircode.Location = new System.Drawing.Point(52, 402);
+            this.lb_Eircode.Location = new System.Drawing.Point(39, 327);
+            this.lb_Eircode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Eircode.Name = "lb_Eircode";
-            this.lb_Eircode.Size = new System.Drawing.Size(54, 16);
+            this.lb_Eircode.Size = new System.Drawing.Size(43, 13);
             this.lb_Eircode.TabIndex = 6;
             this.lb_Eircode.Text = "Eircode";
             // 
             // lb_Town
             // 
             this.lb_Town.AutoSize = true;
-            this.lb_Town.Location = new System.Drawing.Point(52, 375);
+            this.lb_Town.Location = new System.Drawing.Point(39, 305);
+            this.lb_Town.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Town.Name = "lb_Town";
-            this.lb_Town.Size = new System.Drawing.Size(40, 16);
+            this.lb_Town.Size = new System.Drawing.Size(34, 13);
             this.lb_Town.TabIndex = 5;
             this.lb_Town.Text = "Town";
             // 
             // lb_PhoneNo
             // 
             this.lb_PhoneNo.AutoSize = true;
-            this.lb_PhoneNo.Location = new System.Drawing.Point(52, 298);
+            this.lb_PhoneNo.Location = new System.Drawing.Point(39, 242);
+            this.lb_PhoneNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_PhoneNo.Name = "lb_PhoneNo";
-            this.lb_PhoneNo.Size = new System.Drawing.Size(64, 16);
+            this.lb_PhoneNo.Size = new System.Drawing.Size(52, 13);
             this.lb_PhoneNo.TabIndex = 3;
             this.lb_PhoneNo.Text = "PhoneNo";
             // 
             // lb_Email
             // 
             this.lb_Email.AutoSize = true;
-            this.lb_Email.Location = new System.Drawing.Point(52, 270);
+            this.lb_Email.Location = new System.Drawing.Point(39, 219);
+            this.lb_Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Email.Name = "lb_Email";
-            this.lb_Email.Size = new System.Drawing.Size(41, 16);
+            this.lb_Email.Size = new System.Drawing.Size(32, 13);
             this.lb_Email.TabIndex = 2;
             this.lb_Email.Text = "Email";
             // 
             // lb_LastName
             // 
             this.lb_LastName.AutoSize = true;
-            this.lb_LastName.Location = new System.Drawing.Point(52, 177);
+            this.lb_LastName.Location = new System.Drawing.Point(39, 144);
+            this.lb_LastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_LastName.Name = "lb_LastName";
-            this.lb_LastName.Size = new System.Drawing.Size(72, 16);
+            this.lb_LastName.Size = new System.Drawing.Size(58, 13);
             this.lb_LastName.TabIndex = 1;
             this.lb_LastName.Text = "Last Name";
             // 
             // lb_FirstName
             // 
             this.lb_FirstName.AutoSize = true;
-            this.lb_FirstName.Location = new System.Drawing.Point(52, 149);
+            this.lb_FirstName.Location = new System.Drawing.Point(39, 121);
+            this.lb_FirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_FirstName.Name = "lb_FirstName";
-            this.lb_FirstName.Size = new System.Drawing.Size(72, 16);
+            this.lb_FirstName.Size = new System.Drawing.Size(57, 13);
             this.lb_FirstName.TabIndex = 0;
             this.lb_FirstName.Text = "First Name";
             // 
             // lb_Street
             // 
             this.lb_Street.AutoSize = true;
-            this.lb_Street.Location = new System.Drawing.Point(52, 347);
+            this.lb_Street.Location = new System.Drawing.Point(39, 282);
+            this.lb_Street.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Street.Name = "lb_Street";
-            this.lb_Street.Size = new System.Drawing.Size(42, 16);
+            this.lb_Street.Size = new System.Drawing.Size(35, 13);
             this.lb_Street.TabIndex = 4;
             this.lb_Street.Text = "Street";
             // 
             // GB_AddSitterDetails
             // 
+            this.GB_AddSitterDetails.Controls.Add(this.cbo_Experience);
+            this.GB_AddSitterDetails.Controls.Add(this.label1);
+            this.GB_AddSitterDetails.Controls.Add(this.cbo_YesNo);
+            this.GB_AddSitterDetails.Controls.Add(this.lb_Certified);
             this.GB_AddSitterDetails.Controls.Add(this.gb_BioDetails);
             this.GB_AddSitterDetails.Controls.Add(this.txt_Rates);
             this.GB_AddSitterDetails.Controls.Add(this.lb_Rates);
@@ -264,15 +311,35 @@
             this.GB_AddSitterDetails.Controls.Add(this.lb_Email);
             this.GB_AddSitterDetails.Controls.Add(this.lb_LastName);
             this.GB_AddSitterDetails.Controls.Add(this.lb_FirstName);
-            this.GB_AddSitterDetails.Location = new System.Drawing.Point(70, 62);
-            this.GB_AddSitterDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GB_AddSitterDetails.Location = new System.Drawing.Point(52, 50);
+            this.GB_AddSitterDetails.Margin = new System.Windows.Forms.Padding(2);
             this.GB_AddSitterDetails.Name = "GB_AddSitterDetails";
-            this.GB_AddSitterDetails.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.GB_AddSitterDetails.Size = new System.Drawing.Size(1041, 608);
+            this.GB_AddSitterDetails.Padding = new System.Windows.Forms.Padding(2);
+            this.GB_AddSitterDetails.Size = new System.Drawing.Size(781, 494);
             this.GB_AddSitterDetails.TabIndex = 2;
             this.GB_AddSitterDetails.TabStop = false;
             this.GB_AddSitterDetails.Text = "Add Sitter Details";
             this.GB_AddSitterDetails.Enter += new System.EventHandler(this.GB_AddSitterDetails_Enter);
+            // 
+            // cbo_YesNo
+            // 
+            this.cbo_YesNo.FormattingEnabled = true;
+            this.cbo_YesNo.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.cbo_YesNo.Location = new System.Drawing.Point(112, 416);
+            this.cbo_YesNo.Name = "cbo_YesNo";
+            this.cbo_YesNo.Size = new System.Drawing.Size(121, 21);
+            this.cbo_YesNo.TabIndex = 28;
+            // 
+            // lb_Certified
+            // 
+            this.lb_Certified.AutoSize = true;
+            this.lb_Certified.Location = new System.Drawing.Point(39, 416);
+            this.lb_Certified.Name = "lb_Certified";
+            this.lb_Certified.Size = new System.Drawing.Size(45, 13);
+            this.lb_Certified.TabIndex = 27;
+            this.lb_Certified.Text = "Certified";
             // 
             // gb_BioDetails
             // 
@@ -280,120 +347,127 @@
             this.gb_BioDetails.Controls.Add(this.txt_Bio);
             this.gb_BioDetails.Controls.Add(this.lb_Bio);
             this.gb_BioDetails.Controls.Add(this.lb_Skills);
-            this.gb_BioDetails.Location = new System.Drawing.Point(437, 73);
+            this.gb_BioDetails.Location = new System.Drawing.Point(328, 59);
+            this.gb_BioDetails.Margin = new System.Windows.Forms.Padding(2);
             this.gb_BioDetails.Name = "gb_BioDetails";
-            this.gb_BioDetails.Size = new System.Drawing.Size(504, 420);
+            this.gb_BioDetails.Padding = new System.Windows.Forms.Padding(2);
+            this.gb_BioDetails.Size = new System.Drawing.Size(378, 341);
             this.gb_BioDetails.TabIndex = 26;
             this.gb_BioDetails.TabStop = false;
             this.gb_BioDetails.Text = "Bio Details";
             // 
             // txt_Skills
             // 
-            this.txt_Skills.Location = new System.Drawing.Point(139, 232);
+            this.txt_Skills.Location = new System.Drawing.Point(104, 188);
+            this.txt_Skills.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Skills.Multiline = true;
             this.txt_Skills.Name = "txt_Skills";
-            this.txt_Skills.Size = new System.Drawing.Size(227, 150);
+            this.txt_Skills.Size = new System.Drawing.Size(171, 123);
             this.txt_Skills.TabIndex = 26;
             // 
             // txt_Bio
             // 
-            this.txt_Bio.Location = new System.Drawing.Point(139, 49);
+            this.txt_Bio.Location = new System.Drawing.Point(104, 40);
+            this.txt_Bio.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Bio.Multiline = true;
             this.txt_Bio.Name = "txt_Bio";
-            this.txt_Bio.Size = new System.Drawing.Size(227, 150);
+            this.txt_Bio.Size = new System.Drawing.Size(171, 123);
             this.txt_Bio.TabIndex = 25;
             // 
             // lb_Skills
             // 
             this.lb_Skills.AutoSize = true;
-            this.lb_Skills.Location = new System.Drawing.Point(40, 238);
+            this.lb_Skills.Location = new System.Drawing.Point(30, 193);
+            this.lb_Skills.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Skills.Name = "lb_Skills";
-            this.lb_Skills.Size = new System.Drawing.Size(39, 16);
+            this.lb_Skills.Size = new System.Drawing.Size(31, 13);
             this.lb_Skills.TabIndex = 23;
             this.lb_Skills.Text = "Skills";
             // 
             // txt_Rates
             // 
-            this.txt_Rates.Location = new System.Drawing.Point(149, 447);
-            this.txt_Rates.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Rates.Location = new System.Drawing.Point(112, 350);
+            this.txt_Rates.Margin = new System.Windows.Forms.Padding(2);
             this.txt_Rates.Name = "txt_Rates";
-            this.txt_Rates.Size = new System.Drawing.Size(192, 22);
+            this.txt_Rates.Size = new System.Drawing.Size(145, 20);
             this.txt_Rates.TabIndex = 24;
             // 
             // lb_Rates
             // 
             this.lb_Rates.AutoSize = true;
-            this.lb_Rates.Location = new System.Drawing.Point(52, 450);
+            this.lb_Rates.Location = new System.Drawing.Point(40, 357);
+            this.lb_Rates.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Rates.Name = "lb_Rates";
-            this.lb_Rates.Size = new System.Drawing.Size(43, 16);
+            this.lb_Rates.Size = new System.Drawing.Size(35, 13);
             this.lb_Rates.TabIndex = 22;
             this.lb_Rates.Text = "Rates";
+            this.lb_Rates.Click += new System.EventHandler(this.lb_Rates_Click);
             // 
             // lbDOB
             // 
             this.lbDOB.AutoSize = true;
-            this.lbDOB.Location = new System.Drawing.Point(52, 203);
+            this.lbDOB.Location = new System.Drawing.Point(39, 165);
+            this.lbDOB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDOB.Name = "lbDOB";
-            this.lbDOB.Size = new System.Drawing.Size(42, 16);
+            this.lbDOB.Size = new System.Drawing.Size(36, 13);
             this.lbDOB.TabIndex = 21;
             this.lbDOB.Text = "D.O.B";
             // 
             // txt_DOB
             // 
-            this.txt_DOB.Location = new System.Drawing.Point(149, 197);
-            this.txt_DOB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_DOB.Location = new System.Drawing.Point(112, 160);
+            this.txt_DOB.Margin = new System.Windows.Forms.Padding(2);
             this.txt_DOB.Name = "txt_DOB";
-            this.txt_DOB.Size = new System.Drawing.Size(192, 22);
+            this.txt_DOB.Size = new System.Drawing.Size(145, 20);
             this.txt_DOB.TabIndex = 20;
             // 
             // bn_Back
             // 
-            this.bn_Back.Location = new System.Drawing.Point(1092, 4);
+            this.bn_Back.Location = new System.Drawing.Point(819, 3);
+            this.bn_Back.Margin = new System.Windows.Forms.Padding(2);
             this.bn_Back.Name = "bn_Back";
-            this.bn_Back.Size = new System.Drawing.Size(77, 24);
+            this.bn_Back.Size = new System.Drawing.Size(58, 20);
             this.bn_Back.TabIndex = 4;
             this.bn_Back.Text = "Back";
             this.bn_Back.UseVisualStyleBackColor = true;
             this.bn_Back.Click += new System.EventHandler(this.bn_Back_Click);
             // 
-            // mnu_Home
+            // label1
             // 
-            this.mnu_Home.Name = "mnu_Home";
-            this.mnu_Home.Size = new System.Drawing.Size(64, 24);
-            this.mnu_Home.Text = "Home";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 387);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Experience";
             // 
-            // mnu_Bookings
+            // cbo_Experience
             // 
-            this.mnu_Bookings.Name = "mnu_Bookings";
-            this.mnu_Bookings.Size = new System.Drawing.Size(84, 24);
-            this.mnu_Bookings.Text = "Bookings";
-            // 
-            // mnu_Services
-            // 
-            this.mnu_Services.Name = "mnu_Services";
-            this.mnu_Services.Size = new System.Drawing.Size(76, 24);
-            this.mnu_Services.Text = "Services";
-            // 
-            // mnu_Rates
-            // 
-            this.mnu_Rates.Name = "mnu_Rates";
-            this.mnu_Rates.Size = new System.Drawing.Size(59, 24);
-            this.mnu_Rates.Text = "Rates";
-            // 
-            // mnu_AboutUs
-            // 
-            this.mnu_AboutUs.Name = "mnu_AboutUs";
-            this.mnu_AboutUs.Size = new System.Drawing.Size(82, 24);
-            this.mnu_AboutUs.Text = "About us";
+            this.cbo_Experience.FormattingEnabled = true;
+            this.cbo_Experience.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cbo_Experience.Location = new System.Drawing.Point(112, 389);
+            this.cbo_Experience.Name = "cbo_Experience";
+            this.cbo_Experience.Size = new System.Drawing.Size(121, 21);
+            this.cbo_Experience.TabIndex = 30;
             // 
             // frm_AddSitter
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1181, 764);
+            this.ClientSize = new System.Drawing.Size(886, 621);
             this.Controls.Add(this.bn_Back);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.GB_AddSitterDetails);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_AddSitter";
             this.Text = "  ";
             this.Load += new System.EventHandler(this.frm_AddSitter_Load);
@@ -443,5 +517,9 @@
         private System.Windows.Forms.ToolStripMenuItem mnu_Services;
         private System.Windows.Forms.ToolStripMenuItem mnu_Rates;
         private System.Windows.Forms.ToolStripMenuItem mnu_AboutUs;
+        private System.Windows.Forms.Label lb_Certified;
+        private System.Windows.Forms.ComboBox cbo_YesNo;
+        private System.Windows.Forms.ComboBox cbo_Experience;
+        private System.Windows.Forms.Label label1;
     }
 }

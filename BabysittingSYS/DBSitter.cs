@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-//using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Client;
 
 namespace BabysittingSYS
 {
@@ -23,6 +23,7 @@ namespace BabysittingSYS
         public decimal Rates;
         public string Bio;
         public string Skills;
+        public string Certified;
 
        public DBSitter() 
         { 
@@ -38,9 +39,10 @@ namespace BabysittingSYS
             this.Rates = 0.0m;
             this.Bio = "";
             this.Skills = "";
+            this.Certified = "";
         }
 
-        public DBSitter(int SitterID, String FirstName, String LastName, DateTime DOB, string Email, string PhoneNo, string Street, string Town, string EirCode, decimal Rates, string Bio, string Skills)
+        public DBSitter(int SitterID, String FirstName, String LastName, DateTime DOB, string Email, string PhoneNo, string Street, string Town, string EirCode, decimal Rates, string Bio, string Skills, string Certified)
         {
             this.SitterID = SitterID;
             this.FirstName = FirstName;
@@ -54,6 +56,7 @@ namespace BabysittingSYS
             this.Rates = Rates;
             this.Bio = Bio;
             this.Skills = Skills;
+            this.Certified = Certified;
         }
 
         //getters
@@ -69,6 +72,7 @@ namespace BabysittingSYS
         public decimal getRates() { return Rates; }
         public String getBio() { return Bio; }
         public String getSkills() { return Skills; }
+        public String getCertified() { return Certified; }
 
         //setters
         public void setSitterID(int SitterID) { this.SitterID = SitterID; }
@@ -83,19 +87,26 @@ namespace BabysittingSYS
         public void setRates(decimal Rates) { this.Rates = Rates; }
         public void setBio(String Bio) { this.Bio = Bio; }
         public void setSkills(String Skills) { this.Skills = Skills; }
+        public void setCertified(String Certified) { this.Certified = Certified; }
 
-       /* public DataSet GetSitters()
+        public DataSet GetSitters()
         {
             DataSet ds = new DataSet();
+            //this opens a db connection
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
+
             conn.Open();
-            String strSQL = "SELECT * FROM Sitters ORDER BY SitterID";
+            //Define the SQL query to be executed
+            String strSQL = "SELECT * FROM Sitter ORDER BY SitterID";
+
+            //Execute the SQL query (OracleCommand)
             OracleCommand cmd = new OracleCommand(strSQL, conn);
             OracleDataAdapter da = new OracleDataAdapter(cmd);
-            da.Fill(ds, "Sitters");
+
+            da.Fill(ds, "Sitter");
             conn.Close();
             return ds;
-        }*/
+        }
 
 
 
