@@ -28,7 +28,11 @@ namespace BabysittingSYS
         private void frm_AddSitter_Load(object sender, EventArgs e)
         {
             {
-                txt_SitterID.Text = "10001";
+                //Set Max DOB
+                dtpDOB.MaxDate = DateTime.Today.AddYears(-18);
+
+                //get next SitterId
+
             }
 
         }

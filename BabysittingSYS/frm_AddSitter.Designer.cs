@@ -53,6 +53,8 @@
             this.lb_FirstName = new System.Windows.Forms.Label();
             this.lb_Street = new System.Windows.Forms.Label();
             this.GB_AddSitterDetails = new System.Windows.Forms.GroupBox();
+            this.cbo_Experience = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbo_YesNo = new System.Windows.Forms.ComboBox();
             this.lb_Certified = new System.Windows.Forms.Label();
             this.gb_BioDetails = new System.Windows.Forms.GroupBox();
@@ -64,8 +66,7 @@
             this.lbDOB = new System.Windows.Forms.Label();
             this.txt_DOB = new System.Windows.Forms.TextBox();
             this.bn_Back = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbo_Experience = new System.Windows.Forms.ComboBox();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1.SuspendLayout();
             this.GB_AddSitterDetails.SuspendLayout();
             this.gb_BioDetails.SuspendLayout();
@@ -285,6 +286,7 @@
             // 
             // GB_AddSitterDetails
             // 
+            this.GB_AddSitterDetails.Controls.Add(this.dtpDOB);
             this.GB_AddSitterDetails.Controls.Add(this.cbo_Experience);
             this.GB_AddSitterDetails.Controls.Add(this.label1);
             this.GB_AddSitterDetails.Controls.Add(this.cbo_YesNo);
@@ -320,6 +322,33 @@
             this.GB_AddSitterDetails.TabStop = false;
             this.GB_AddSitterDetails.Text = "Add Sitter Details";
             this.GB_AddSitterDetails.Enter += new System.EventHandler(this.GB_AddSitterDetails_Enter);
+            // 
+            // cbo_Experience
+            // 
+            this.cbo_Experience.FormattingEnabled = true;
+            this.cbo_Experience.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cbo_Experience.Location = new System.Drawing.Point(112, 389);
+            this.cbo_Experience.Name = "cbo_Experience";
+            this.cbo_Experience.Size = new System.Drawing.Size(121, 21);
+            this.cbo_Experience.TabIndex = 30;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 387);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Experience";
             // 
             // cbo_YesNo
             // 
@@ -432,32 +461,12 @@
             this.bn_Back.UseVisualStyleBackColor = true;
             this.bn_Back.Click += new System.EventHandler(this.bn_Back_Click);
             // 
-            // label1
+            // dtpDOB
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 387);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Experience";
-            // 
-            // cbo_Experience
-            // 
-            this.cbo_Experience.FormattingEnabled = true;
-            this.cbo_Experience.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.cbo_Experience.Location = new System.Drawing.Point(112, 389);
-            this.cbo_Experience.Name = "cbo_Experience";
-            this.cbo_Experience.Size = new System.Drawing.Size(121, 21);
-            this.cbo_Experience.TabIndex = 30;
+            this.dtpDOB.Location = new System.Drawing.Point(515, 427);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(208, 20);
+            this.dtpDOB.TabIndex = 31;
             // 
             // frm_AddSitter
             // 
@@ -521,5 +530,6 @@
         private System.Windows.Forms.ComboBox cbo_YesNo;
         private System.Windows.Forms.ComboBox cbo_Experience;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
     }
 }

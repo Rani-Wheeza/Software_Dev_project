@@ -70,10 +70,8 @@ namespace BabysittingSYS
         public void setEmail(String Email) { this.Email = Email; }
         public void setNoOfChildren(String NoOfChildren) { this.NoOfChildren = NoOfChildren; }
 
-        public DataSet Client
+        public static DataSet getClients()
         {
-            get
-            {
                 DataSet ds = new DataSet();
                 //this opens a db connection
                 OracleConnection conn = new OracleConnection(DBConnect.oradb);
@@ -89,7 +87,6 @@ namespace BabysittingSYS
                 da.Fill(ds, "Client");
                 conn.Close();
                 return ds;
-            }
         }
     }
 }
