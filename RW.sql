@@ -7,7 +7,7 @@ DROP TABLE Client;
 
 PROMPT CREATING Table Types
 PROMPT
-/*CREATE TABLE Types
+/CREATE TABLE Types
 (TypeCode char(2),
  Meaning varchar2(20),
  CONSTRAINT pk_Types PRIMARY KEY (TypeCode));
@@ -72,4 +72,4 @@ INSERT INTO Client
 VALUES('John Doe', 'johndoe@yahoo.com', 0899672533, 'Cork', 'Maine street');
 
 
-COMMIT;*/
+COMMIT;
