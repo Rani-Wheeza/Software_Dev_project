@@ -16,5 +16,10 @@ namespace BabysittingSYS
         {
             InitializeComponent();
         }
+
+        private void frm_RemoveSitter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

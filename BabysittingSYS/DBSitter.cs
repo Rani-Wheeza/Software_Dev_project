@@ -23,6 +23,7 @@ namespace BabysittingSYS
         public decimal Rates;
         public string Bio;
         public string Skills;
+        public String Experience;
         public string Certified;
 
        public DBSitter() 
@@ -39,10 +40,11 @@ namespace BabysittingSYS
             this.Rates = 0.0m;
             this.Bio = "";
             this.Skills = "";
+            this.Experience = "";
             this.Certified = "";
         }
 
-        public DBSitter(int SitterID, String FirstName, String LastName, DateTime DOB, string Email, string PhoneNo, string Street, string Town, string EirCode, decimal Rates, string Bio, string Skills, string Certified)
+        public DBSitter(int SitterID, String FirstName, String LastName, DateTime DOB, string Email, string PhoneNo, string Street, string Town, string EirCode, decimal Rates, string Bio, string Skills, string Experience, string Certified)
         {
             this.SitterID = SitterID;
             this.FirstName = FirstName;
@@ -56,6 +58,7 @@ namespace BabysittingSYS
             this.Rates = Rates;
             this.Bio = Bio;
             this.Skills = Skills;
+            this.Experience = Experience;
             this.Certified = Certified;
         }
 
@@ -72,6 +75,7 @@ namespace BabysittingSYS
         public decimal getRates() { return Rates; }
         public String getBio() { return Bio; }
         public String getSkills() { return Skills; }
+        public String getExperience() { return Experience; }
         public String getCertified() { return Certified; }
 
         //setters
@@ -87,6 +91,7 @@ namespace BabysittingSYS
         public void setRates(decimal Rates) { this.Rates = Rates; }
         public void setBio(String Bio) { this.Bio = Bio; }
         public void setSkills(String Skills) { this.Skills = Skills; }
+        public void setExperience(String Experience) { this.Experience = Experience; }
         public void setCertified(String Certified) { this.Certified = Certified; }
 
         public DataSet GetSitters()

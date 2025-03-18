@@ -84,9 +84,48 @@ namespace BabysittingSYS
                 OracleCommand cmd = new OracleCommand(strSQL, conn);
                 OracleDataAdapter da = new OracleDataAdapter(cmd);
 
+                
+
                 da.Fill(ds, "Client");
+
                 conn.Close();
+
                 return ds;
+        }
+
+        public static DataSet getAllClients(String ClientID)
+        {
+            //connect this to the database
+            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+
+
+            //Usedto define the SQL query
+            String sqlQuery = "SELECT ClientId, firstName, lastName, PhoneNo,Email" +
+                "FROM Client WHERE ClientID = '" + ClientID + "'ORDER BY Name";
+
+
+            //execute the SQL query/Command
+            OracleCommand cmd = new OracleCommand(sqlQuery, conn);
+
+            OracleDataAdapter da = new OracleDataAdapter(cmd);
+
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Client");
+
+            //Closes database
+            conn.Close();
+
+            return ds;
+        }
+
+        public void getClient(int Id)
+        {
+
+        }
+
+        public void addClient()
+        {
+
         }
     }
 }

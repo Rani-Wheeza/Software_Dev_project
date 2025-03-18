@@ -85,12 +85,12 @@ namespace BabysittingSYS
                 return;
             }
 
-            if (txt_DOB.Text.Equals(""))
+            /*if (txt_DOB.Text.Equals(""))
             {
                 MessageBox.Show("Birth date is requried", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txt_DOB.Focus();
                 return;
-            }
+            }*/
 
             if (txt_Town.Text.Equals(""))
             {
@@ -146,7 +146,6 @@ namespace BabysittingSYS
             txt_Email.Clear();
             txt_PhoneNo.Clear();
             txt_Street.Clear();
-            txt_DOB.Clear();
             txt_Town.Clear();
             txt_Eircode.Clear();
             txt_Rates.Clear();

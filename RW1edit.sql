@@ -1,6 +1,6 @@
 DROP TABLE Client;
 DROP TABLE Sitter;
-DROP TABLE Booking;
+--DROP TABLE Booking;
 
 set define off
 --CLIENT TABLE
@@ -39,7 +39,7 @@ CREATE TABLE SITTER(
 
 --BOOKING TABLE
 --PROMPT
-CREATE TABLE BOOKING
+/*CREATE TABLE BOOKING
 (BookingID numeric(4),
 BookingDate DATE NOT NULL, 
 ClientID NUMERIC, 
@@ -50,7 +50,7 @@ PaymentAmount DECIMAL(10, 2),
 CommissionFee DECIMAL(10, 2), 
 CONSTRAINT pk_Booking PRIMARY KEY (BookingID),
 CONSTRAINT fk_Booking_Client FOREIGN KEY (ClientID) REFERENCES Client,
-CONSTRAINT fk_Booking_Sitter FOREIGN KEY (SitterID) REFERENCES Sitter);
+CONSTRAINT fk_Booking_Sitter FOREIGN KEY (SitterID) REFERENCES Sitter);*/
 
 --Input data in Client
 --Prompt

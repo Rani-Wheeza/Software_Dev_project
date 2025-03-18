@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-//using Oracle.ManagedDataAccess.Client;
+
+
 
 namespace BabysittingSYS
 {
@@ -15,10 +14,6 @@ namespace BabysittingSYS
 
         //public const String oradb = "Data Source = studentoracle/orcl; User Id = Leccw; Password = 1234567;";
 
-       /* public OracleConnection GetConnection()
-        {
-            return new OracleConnection(connectionString);
-        }*/ //working on it
-
+       
     }
 }

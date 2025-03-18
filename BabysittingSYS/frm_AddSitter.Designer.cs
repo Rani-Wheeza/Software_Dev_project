@@ -53,6 +53,7 @@
             this.lb_FirstName = new System.Windows.Forms.Label();
             this.lb_Street = new System.Windows.Forms.Label();
             this.GB_AddSitterDetails = new System.Windows.Forms.GroupBox();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.cbo_Experience = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbo_YesNo = new System.Windows.Forms.ComboBox();
@@ -64,9 +65,7 @@
             this.txt_Rates = new System.Windows.Forms.TextBox();
             this.lb_Rates = new System.Windows.Forms.Label();
             this.lbDOB = new System.Windows.Forms.Label();
-            this.txt_DOB = new System.Windows.Forms.TextBox();
             this.bn_Back = new System.Windows.Forms.Button();
-            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1.SuspendLayout();
             this.GB_AddSitterDetails.SuspendLayout();
             this.gb_BioDetails.SuspendLayout();
@@ -295,7 +294,6 @@
             this.GB_AddSitterDetails.Controls.Add(this.txt_Rates);
             this.GB_AddSitterDetails.Controls.Add(this.lb_Rates);
             this.GB_AddSitterDetails.Controls.Add(this.lbDOB);
-            this.GB_AddSitterDetails.Controls.Add(this.txt_DOB);
             this.GB_AddSitterDetails.Controls.Add(this.bnEnterDetails);
             this.GB_AddSitterDetails.Controls.Add(this.txt_LastName);
             this.GB_AddSitterDetails.Controls.Add(this.txt_Email);
@@ -322,6 +320,14 @@
             this.GB_AddSitterDetails.TabStop = false;
             this.GB_AddSitterDetails.Text = "Add Sitter Details";
             this.GB_AddSitterDetails.Enter += new System.EventHandler(this.GB_AddSitterDetails_Enter);
+            // 
+            // dtpDOB
+            // 
+            this.dtpDOB.Location = new System.Drawing.Point(112, 165);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(191, 20);
+            this.dtpDOB.TabIndex = 31;
+            this.dtpDOB.Value = new System.DateTime(2025, 3, 18, 10, 18, 40, 0);
             // 
             // cbo_Experience
             // 
@@ -354,8 +360,8 @@
             // 
             this.cbo_YesNo.FormattingEnabled = true;
             this.cbo_YesNo.Items.AddRange(new object[] {
-            "Yes",
-            "No"});
+            "Y",
+            "N"});
             this.cbo_YesNo.Location = new System.Drawing.Point(112, 416);
             this.cbo_YesNo.Name = "cbo_YesNo";
             this.cbo_YesNo.Size = new System.Drawing.Size(121, 21);
@@ -442,14 +448,6 @@
             this.lbDOB.TabIndex = 21;
             this.lbDOB.Text = "D.O.B";
             // 
-            // txt_DOB
-            // 
-            this.txt_DOB.Location = new System.Drawing.Point(112, 160);
-            this.txt_DOB.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_DOB.Name = "txt_DOB";
-            this.txt_DOB.Size = new System.Drawing.Size(145, 20);
-            this.txt_DOB.TabIndex = 20;
-            // 
             // bn_Back
             // 
             this.bn_Back.Location = new System.Drawing.Point(819, 3);
@@ -460,13 +458,6 @@
             this.bn_Back.Text = "Back";
             this.bn_Back.UseVisualStyleBackColor = true;
             this.bn_Back.Click += new System.EventHandler(this.bn_Back_Click);
-            // 
-            // dtpDOB
-            // 
-            this.dtpDOB.Location = new System.Drawing.Point(515, 427);
-            this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(208, 20);
-            this.dtpDOB.TabIndex = 31;
             // 
             // frm_AddSitter
             // 
@@ -513,7 +504,6 @@
         private System.Windows.Forms.Label lb_Street;
         private System.Windows.Forms.GroupBox GB_AddSitterDetails;
         private System.Windows.Forms.Label lbDOB;
-        private System.Windows.Forms.TextBox txt_DOB;
         private System.Windows.Forms.Label lb_Skills;
         private System.Windows.Forms.Label lb_Rates;
         private System.Windows.Forms.TextBox txt_Rates;
